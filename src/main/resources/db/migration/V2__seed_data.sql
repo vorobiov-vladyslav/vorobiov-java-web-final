@@ -1,0 +1,87 @@
+INSERT INTO teacher (id, first_name, last_name, email, date_of_birth, position) VALUES
+(1, 'Олена', 'Шевченко', 'olena.shevchenko@univ.ua', '1975-03-12', 'PROFESSOR'),
+(2, 'Андрій', 'Коваленко', 'andrii.kovalenko@univ.ua', '1982-07-25', 'LECTURER'),
+(3, 'Марія', 'Бондаренко', 'maria.bondarenko@univ.ua', '1990-11-03', 'ASSISTANT'),
+(4, 'Сергій', 'Ткаченко', 'serhii.tkachenko@univ.ua', '1978-01-30', 'PROFESSOR'),
+(5, 'Наталія', 'Кравченко', 'natalia.kravchenko@univ.ua', '1986-09-17', 'LECTURER');
+
+INSERT INTO course (id, name, credits, description, teacher_id) VALUES
+(1, 'Java Web Development', 5, 'Servlets, Spring Boot, REST API', 1),
+(2, 'Databases', 4, 'Relational databases, SQL, PostgreSQL', 2),
+(3, 'Algorithms and Data Structures', 6, 'Complexity, sorting, graphs', 4),
+(4, 'Spring Framework', 5, 'DI, Spring Boot, Spring Data JPA', 1),
+(5, 'English for IT', 3, 'Technical English communication', 3),
+(6, 'Mathematical Analysis', 6, 'Limits, derivatives, integrals', 4),
+(7, 'REST API Design', 4, 'HTTP, REST conventions, OpenAPI', 2),
+(8, 'Software Testing', 3, 'Unit testing, integration testing, TDD', 5),
+(9, 'DevOps Basics', 4, 'CI/CD, Docker, cloud deployment', 5),
+(10, 'Software Architecture', 5, 'Layered architecture, patterns, SOLID', 4);
+
+INSERT INTO student (id, first_name, last_name, email, enrollment_year, status) VALUES
+(1, 'Іван', 'Петренко', 'ivan.petrenko@stud.univ.ua', 2024, 'ACTIVE'),
+(2, 'Оксана', 'Мельник', 'oksana.melnyk@stud.univ.ua', 2024, 'ACTIVE'),
+(3, 'Дмитро', 'Іваненко', 'dmytro.ivanenko@stud.univ.ua', 2024, 'ACTIVE'),
+(4, 'Катерина', 'Савченко', 'kateryna.savchenko@stud.univ.ua', 2024, 'ACTIVE'),
+(5, 'Максим', 'Руденко', 'maksym.rudenko@stud.univ.ua', 2024, 'ON_LEAVE'),
+(6, 'Юлія', 'Лисенко', 'yulia.lysenko@stud.univ.ua', 2024, 'ACTIVE'),
+(7, 'Олексій', 'Марченко', 'oleksii.marchenko@stud.univ.ua', 2023, 'ACTIVE'),
+(8, 'Анна', 'Клименко', 'anna.klymenko@stud.univ.ua', 2023, 'ACTIVE'),
+(9, 'Володимир', 'Павленко', 'volodymyr.pavlenko@stud.univ.ua', 2023, 'EXPELLED'),
+(10, 'Софія', 'Гриценко', 'sofia.hrytsenko@stud.univ.ua', 2023, 'ACTIVE'),
+(11, 'Богдан', 'Романенко', 'bohdan.romanenko@stud.univ.ua', 2025, 'ACTIVE'),
+(12, 'Вікторія', 'Захарченко', 'viktoria.zakharchenko@stud.univ.ua', 2025, 'ACTIVE'),
+(13, 'Тарас', 'Мороз', 'taras.moroz@stud.univ.ua', 2025, 'ACTIVE'),
+(14, 'Ірина', 'Козак', 'iryna.kozak@stud.univ.ua', 2025, 'ACTIVE'),
+(15, 'Назар', 'Швець', 'nazar.shvets@stud.univ.ua', 2025, 'ON_LEAVE'),
+(16, 'Дарина', 'Пономаренко', 'daryna.ponomarenko@stud.univ.ua', 2025, 'ACTIVE'),
+(17, 'Артем', 'Василенко', 'artem.vasylenko@stud.univ.ua', 2025, 'ACTIVE'),
+(18, 'Соломія', 'Данилюк', 'solomia.danyliuk@stud.univ.ua', 2025, 'ACTIVE'),
+(19, 'Ростислав', 'Гончар', 'rostyslav.honchar@stud.univ.ua', 2022, 'GRADUATED'),
+(20, 'Христина', 'Федоренко', 'khrystyna.fedorenko@stud.univ.ua', 2022, 'GRADUATED');
+
+INSERT INTO enrollment (student_id, course_id, semester, study_year, grade, paid) VALUES
+(1, 1, 1, 2025, 'A', TRUE),
+(1, 2, 1, 2025, 'A', TRUE),
+(1, 3, 2, 2025, 'A', TRUE),
+(1, 4, 2, 2024, 'B', TRUE),
+(2, 1, 1, 2025, 'A', TRUE),
+(2, 4, 1, 2025, 'B', TRUE),
+(2, 5, 2, 2025, 'A', FALSE),
+(2, 2, 2, 2024, 'A', TRUE),
+(3, 2, 1, 2025, 'B', TRUE),
+(3, 3, 1, 2025, 'B', FALSE),
+(3, 6, 2, 2025, 'C', TRUE),
+(3, 1, 2, 2024, 'C', TRUE),
+(4, 1, 1, 2025, 'C', TRUE),
+(4, 7, 2, 2025, 'D', TRUE),
+(4, 5, 2, 2024, 'B', TRUE),
+(5, 5, 1, 2025, 'F', FALSE),
+(5, 8, 2, 2025, 'D', FALSE),
+(5, 3, 2, 2024, 'D', TRUE),
+(6, 6, 1, 2025, 'B', TRUE),
+(6, 9, 2, 2025, 'NA', FALSE),
+(7, 7, 1, 2025, 'A', TRUE),
+(7, 10, 2, 2025, 'B', TRUE),
+(7, 2, 2, 2024, 'A', TRUE),
+(8, 8, 1, 2025, 'C', FALSE),
+(8, 1, 2, 2025, 'NA', FALSE),
+(9, 9, 1, 2025, 'D', TRUE),
+(9, 2, 2, 2025, 'C', TRUE),
+(10, 10, 1, 2025, 'B', TRUE),
+(10, 3, 2, 2025, 'A', TRUE),
+(11, 4, 1, 2026, 'NA', TRUE),
+(11, 5, 1, 2026, 'NA', FALSE),
+(12, 6, 1, 2026, 'NA', TRUE),
+(13, 7, 1, 2026, 'NA', FALSE),
+(14, 8, 1, 2026, 'NA', TRUE),
+(15, 9, 1, 2026, 'NA', TRUE),
+(16, 10, 1, 2026, 'NA', FALSE),
+(17, 1, 1, 2026, 'NA', TRUE),
+(18, 2, 1, 2026, 'NA', TRUE),
+(19, 3, 1, 2026, 'NA', FALSE),
+(20, 4, 1, 2026, 'NA', TRUE);
+
+SELECT setval(pg_get_serial_sequence('teacher', 'id'), (SELECT MAX(id) FROM teacher));
+SELECT setval(pg_get_serial_sequence('student', 'id'), (SELECT MAX(id) FROM student));
+SELECT setval(pg_get_serial_sequence('course', 'id'), (SELECT MAX(id) FROM course));
+SELECT setval(pg_get_serial_sequence('enrollment', 'id'), (SELECT MAX(id) FROM enrollment));

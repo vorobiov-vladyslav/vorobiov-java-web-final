@@ -1,0 +1,24 @@
+package ua.university.sms.model.enums;
+
+public enum Grade {
+    A(4.0),
+    B(3.0),
+    C(2.0),
+    D(1.0),
+    F(0.0),
+    NA(0.0);
+
+    private final double points;
+
+    Grade(double points) {
+        this.points = points;
+    }
+
+    public double points() {
+        return points;
+    }
+
+    public boolean isGraded() {
+        return this != NA;
+    }
+}
